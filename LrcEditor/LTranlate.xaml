@@ -1,0 +1,38 @@
+﻿<Window x:Class="LrcEditor.LTranlate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:LrcEditor"
+        mc:Ignorable="d"
+        Title="LTranlate" Height="558.176" Width="889.163" Icon="/Resources/slogo.png" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.9*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.12*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <materialDesign:PackIcon Kind="GTranslate" Grid.Row="0" Grid.Column="0" Margin="10,10,0,0" Height="24" Width="27" VerticalAlignment="Center" />
+        <TextBlock FontSize="20" Grid.Row="0" Grid.Column="0" Text="翻译..." Margin="42,10,10,10" VerticalAlignment="Center"/>
+        <materialDesign:Card Grid.Row="1" Grid.Column="0" Margin="5">
+            <TextBox Style="{StaticResource MaterialDesignFilledTextFieldTextBox}" x:Name="InputBox" materialDesign:HintAssist.Hint="Type Something..." AcceptsReturn="True" TextWrapping="Wrap" FontSize="16" FontFamily="/Resources/苹方黑体-中粗-简.ttf#.萍方-简" />
+        </materialDesign:Card>
+        <Button x:Name="BtnSearch" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" ToolTip="搜索" Margin="0,15,0,0" Click="BtnSearch_Click" >
+            <materialDesign:PackIcon Kind="Translate" />
+        </Button>
+        <Button x:Name="BtnCopy" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom"  ToolTip="复制" Margin="0,0,0,15" Click="BtnCopy_Click" >
+            <materialDesign:PackIcon Kind="ContentCopy" />
+        </Button>
+        <materialDesign:Card Grid.Row="1" Grid.Column="2" Margin="5">
+            <TextBox Style="{StaticResource MaterialDesignFilledTextFieldTextBox}" x:Name="OutputBox" materialDesign:HintAssist.Hint="Result Here..." AcceptsReturn="True" TextWrapping="Wrap" FontSize="16" IsReadOnly="True" FontFamily="/Resources/苹方黑体-中粗-简.ttf#.萍方-简"/>
+        </materialDesign:Card>
+        <materialDesign:Snackbar x:Name="SnakeB" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" Height="50" IsActive="False"  HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+            <materialDesign:SnackbarMessage Content="2" HorizontalAlignment="Center" VerticalAlignment="Center"  x:Name="SnakeBarMessage" ActionContent="OK"  ActionClick="SnakeBarMessage_ActionClick" />
+        </materialDesign:Snackbar>
+    </Grid>
+</Window>

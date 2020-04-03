@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  
+  <data name="TestLrc" xml:space="preserve">
+    <value>[songName: Look At Me Now]
+[Artists: Chalie Puth]
+[Album: Ego]
+[00:10.16]I said this time next year
+[00:10.16]我说过明年今日
+[00:12.27]I’m gonna be the one to do
+[00:12.27]我将改变自己并做到
+[00:13.63]Everything and more you said I couldn’t do
+[00:13.63]所有你说和没说我做不到的事情
+[00:17.69]This one is for you
+[00:17.69]听好，这是对你说的
+[00:20.68]This time next year
+[00:20.68]明年今日
+[00:22.39]I’m gonna be stronger
+[00:22.39]我要变更强壮一点
+[00:23.52]A little bit taller
+[00:23.52]更高挑一点
+[00:24.88]Top is my only view
+[00:24.88]眼光放的最高
+[00:30.48]I'm kicking in the door now.
+[00:30.48]我适才初窥堂奥
+[00:33.33]Better get out of my way
+[00:33.33]最好不要挡我道
+[00:35.89]Never really saw me coming
+[00:35.89]没正经看到我赶超
+[00:38.29]You left with nothing to say
+[00:38.29]你只剩下无话可说了吧
+[00:40.80]This is for everybody
+[00:40.80]这是“献”给所有
+[00:43.90]Who always put me down
+[00:43.90]那些对我冷眼相向的人
+[00:45.67]I hope you open up your eyes
+[00:45.67]我要你鼓睛暴眼
+[00:48.13]And take a good look at me now
+[00:48.13]好好看看现在的我
+[00:52.80]Take a good look at me now
+[00:52.80]好好看看现在的我
+[00:58.79]Take a good look at me now
+[00:58.79]好好看看现在的我
+[01:01.16]Cause this time next year
+[01:01.16]因为明年这个时候，哼哼
+[01:02.67]I’m gonna walk down these halls
+[01:02.67]我将穿过堂皇厅堂
+[01:03.93]And show my face for the world to see
+[01:03.93]让全世界认识我的模样
+[01:08.15]Gonna see me
+[01:08.15]见到我
+[01:10.47]And I’m gonna call every girl that turned me down
+[01:10.47]我要打给每个拒绝我的女孩
+[01:14.80]And tell them now that I’m just too busy
+[01:14.80]跟她们炫耀我实在太忙
+[01:17.84]Cause I don’t have the time
+[01:17.84]所以才没时间
+[01:20.38]And its funny how my so called friends
+[01:20.38]滑稽的是那些所谓的我的朋友
+[01:23.30]Who always left me alone
+[01:23.30]经常留下我茕茕孑立
+[01:25.62]Suddenly running into me
+[01:25.62]现在一瞬间蜂拥而至
+[01:28.13]And blowing up my phone
+[01:28.13]还打爆了我的电话
+[01:30.28]I'm kicking in the door now.
+[01:30.28]我适才初窥堂奥
+[01:33.14]Better get out of my way
+[01:33.14]最好不要挡我道
+[01:35.57]Never really saw me coming
+[01:35.57]没正经看到我赶超
+[01:37.97]You left with nothing to say
+[01:37.97]你只剩下无话可说了吧
+[01:40.70]This is for everybody
+[01:40.70]这是“献”给所有
+[01:43.80]Who always put me down
+[01:43.80]那些对我冷眼相向的人
+[01:45.44]I hope you open up your eyes
+[01:45.44]我要你鼓睛暴眼
+[01:48.19]And take a good look at me now
+[01:48.19]好好看看现在的我
+[01:52.82]Take a good look at me now
+[01:52.82]好好看看现在的我
+[01:57.47]Take a good look at me now
+[01:57.47]好好看看现在的我
+[02:02.17]Oh baby
+[02:02.17]嘿 北鼻
+[02:03.73]Take a good look at me now
+[02:03.73]好好看看现在的我
+[02:05.76]Take a good look at me now
+[02:05.76]好好看看现在的我
+[02:08.50]Take a good look at me now
+[02:08.50]好好看看现在的我
+[02:14.38]Oh look at me now
+[02:14.38]啊！看现在的我！
+[02:19.68]Oh this one is dedicated
+[02:19.68]这首歌专门献给
+[02:22.58]To all of the people
+[02:22.58]所有那些
+[02:24.14]Who said I would be nothing
+[02:24.14]曾经说我一文不名的人
+[02:25.42]Just look at me now
+[02:25.42]看着我
+[02:26.41]Look at me now
+[02:26.41]看着我
+[02:27.65]Look at me now
+[02:27.65]看着我
+[02:32.26]I'm kicking in the door now.
+[02:32.26]我适才初窥堂奥
+[02:35.77]Better get out of my way
+[02:35.77]最好不要挡我道
+[02:38.80]Never really saw me coming
+[02:38.80]没正经看到我赶超
+[02:40.71]You left with nothing to say
+[02:40.71]你默不作声地离开
+[02:43.30]This is for everybody
+[02:43.30]这是“献”给所有
+[02:45.53]Who always put me down
+[02:45.53]那些对我冷眼相向的人
+[02:47.95]I hope you open up your eyes
+[02:47.95]我要你鼓睛暴眼
+[02:50.62]And take a good look at me now
+[02:50.62]好好看看现在的我
+[02:55.62]Take a good look at me now
+[02:55.62]好好看看现在的我
+[03:00.57]Take a good look at me now
+[03:00.57]好好看看现在的我
+[03:05.61]Take a good look at me now
+[03:05.61]好好看看现在的我
+[03:10.66]Take a good look at me now
+[03:10.66]好好看看现在的我</value>
+  </data>
+  <data name="ColorConfig" xml:space="preserve">
+    <value>&lt;?xml version="1.0"?&gt;
+&lt;LColorConfig&gt;
+    &lt;ColorSet&gt;    
+        &lt;Color name="red50"&gt;#fde0dc&lt;/Color&gt;
+        &lt;Color name="red100"&gt;#f9bdbb&lt;/Color&gt;
+        &lt;Color name="red200"&gt;#f69988&lt;/Color&gt;
+        &lt;Color name="red300"&gt;#f36c60&lt;/Color&gt;
+        &lt;Color name="red400"&gt;#e84e40&lt;/Color&gt;
+        &lt;Color name="red500"&gt;#e51c23&lt;/Color&gt;
+        &lt;Color name="red600"&gt;#dd191d&lt;/Color&gt;
+        &lt;Color name="red700"&gt;#d01716&lt;/Color&gt;
+        &lt;Color name="red800"&gt;#c41411&lt;/Color&gt;
+        &lt;Color name="red900"&gt;#b0120a&lt;/Color&gt;
+        &lt;Color name="reda100"&gt;#ff7997&lt;/Color&gt;
+        &lt;Color name="reda200"&gt;#ff5177&lt;/Color&gt;
+        &lt;Color name="reda400"&gt;#ff2d6f&lt;/Color&gt;
+        &lt;Color name="reda700"&gt;#e00032&lt;/Color&gt;
+
+        &lt;Color name="pink50"&gt;#fce4ec&lt;/Color&gt;
+        &lt;Color name="pink100"&gt;#f8bbd0&lt;/Color&gt;
+        &lt;Color name="pink200"&gt;#f48fb1&lt;/Color&gt;
+        &lt;Color name="pink300"&gt;#f06292&lt;/Color&gt;
+        &lt;Color name="pink400"&gt;#ec407a&lt;/Color&gt;
+        &lt;Color name="pink500"&gt;#e91e63&lt;/Color&gt;
+        &lt;Color name="pink600"&gt;#d81b60&lt;/Color&gt;
+        &lt;Color name="pink700"&gt;#c2185b&lt;/Color&gt;
+        &lt;Color name="pink800"&gt;#ad1457&lt;/Color&gt;
+        &lt;Color name="pink900"&gt;#880e4f&lt;/Color&gt;
+        &lt;Color name="pinka100"&gt;#ff80ab&lt;/Color&gt;
+        &lt;Color name="pinka200"&gt;#ff4081&lt;/Color&gt;
+        &lt;Color name="pinka400"&gt;#f50057&lt;/Color&gt;
+        &lt;Color name="pinka700"&gt;#c51162&lt;/Color&gt;
+
+        &lt;Color name="purple50"&gt;#f3e5f5&lt;/Color&gt;
+        &lt;Color name="purple100"&gt;#e1bee7&lt;/Color&gt;
+        &lt;Color name="purple200"&gt;#ce93d8&lt;/Color&gt;
+        &lt;Color name="purple300"&gt;#ba68c8&lt;/Color&gt;
+        &lt;Color name="purple400"&gt;#ab47bc&lt;/Color&gt;
+        &lt;Color name="purple500"&gt;#9c27b0&lt;/Color&gt;
+        &lt;Color name="purple600"&gt;#8e24aa&lt;/Color&gt;
+        &lt;Color name="purple700"&gt;#7b1fa2&lt;/Color&gt;
+        &lt;Color name="purple800"&gt;#6a1b9a&lt;/Color&gt;
+        &lt;Color name="purple900"&gt;#4a148c&lt;/Color&gt;
+        &lt;Color name="purplea100"&gt;#ea80fc&lt;/Color&gt;
+        &lt;Color name="purplea200"&gt;#e040fb&lt;/Color&gt;
+        &lt;Color name="purplea400"&gt;#d500f9&lt;/Color&gt;
+        &lt;Color name="purplea700"&gt;#aa00ff&lt;/Color&gt;
+
+        &lt;Color name="deeppurple50"&gt;#ede7f6&lt;/Color&gt;
+        &lt;Color name="deeppurple100"&gt;#d1c4e9&lt;/Color&gt;
+        &lt;Color name="deeppurple200"&gt;#b39ddb&lt;/Color&gt;
+        &lt;Color name="deeppurple300"&gt;#9575cd&lt;/Color&gt;
+        &lt;Color name="deeppurple400"&gt;#7e57c2&lt;/Color&gt;
+        &lt;Color name="deeppurple500"&gt;#673ab7&lt;/Color&gt;
+        &lt;Color name="deeppurple600"&gt;#5e35b1&lt;/Color&gt;
+        &lt;Color name="deeppurple700"&gt;#512da8&lt;/Color&gt;
+        &lt;Color name="deeppurple800"&gt;#4527a0&lt;/Color&gt;
+        &lt;Color name="deeppurple900"&gt;#311b92&lt;/Color&gt;
+        &lt;Color name="deeppurplea100"&gt;#b388ff&lt;/Color&gt;
+        &lt;Color name="deeppurplea200"&gt;#7c4dff&lt;/Color&gt;
+        &lt;Color name="deeppurplea400"&gt;#651fff&lt;/Color&gt;
+        &lt;Color name="deeppurplea700"&gt;#6200ea&lt;/Color&gt;
+
+        &lt;Color name="indigo50"&gt;#e8eaf6&lt;/Color&gt;
+        &lt;Color name="indigo100"&gt;#c5cae9&lt;/Color&gt;
+        &lt;Color name="indigo200"&gt;#9fa8da&lt;/Color&gt;
+        &lt;Color name="indigo300"&gt;#7986cb&lt;/Color&gt;
+        &lt;Color name="indigo400"&gt;#5c6bc0&lt;/Color&gt;
+        &lt;Color name="indigo500"&gt;#3f51b5&lt;/Color&gt;
+        &lt;Color name="indigo600"&gt;#3949ab&lt;/Color&gt;
+        &lt;Color name="indigo700"&gt;#303f9f&lt;/Color&gt;
+        &lt;Color name="indigo800"&gt;#283593&lt;/Color&gt;
+        &lt;Color name="indigo900"&gt;#1a237e&lt;/Color&gt;
+        &lt;Color name="indigoa100"&gt;#8c9eff&lt;/Color&gt;
+        &lt;Color name="indigoa200"&gt;#536dfe&lt;/Color&gt;
+        &lt;Color name="indigoa400"&gt;#3d5afe&lt;/Color&gt;
+        &lt;Color name="indigoa700"&gt;#304ffe&lt;/Color&gt;
+
+        &lt;Color name="blue50"&gt;#e7e9fd&lt;/Color&gt;
+        &lt;Color name="blue100"&gt;#d0d9ff&lt;/Color&gt;
+        &lt;Color name="blue200"&gt;#afbfff&lt;/Color&gt;
+        &lt;Color name="blue300"&gt;#91a7ff&lt;/Color&gt;
+        &lt;Color name="blue400"&gt;#738ffe&lt;/Color&gt;
+        &lt;Color name="blue500"&gt;#5677fc&lt;/Color&gt;
+        &lt;Color name="blue600"&gt;#4e6cef&lt;/Color&gt;
+        &lt;Color name="blue700"&gt;#455ede&lt;/Color&gt;
+        &lt;Color name="blue800"&gt;#3b50ce&lt;/Color&gt;
+        &lt;Color name="blue900"&gt;#2a36b1&lt;/Color&gt;
+        &lt;Color name="bluea100"&gt;#a6baff&lt;/Color&gt;
+        &lt;Color name="bluea200"&gt;#6889ff&lt;/Color&gt;
+        &lt;Color name="bluea400"&gt;#4d73ff&lt;/Color&gt;
+        &lt;Color name="bluea700"&gt;#4d69ff&lt;/Color&gt;
+
+        &lt;Color name="lightblue50"&gt;#e1f5fe&lt;/Color&gt;
+        &lt;Color name="lightblue100"&gt;#b3e5fc&lt;/Color&gt;
+        &lt;Color name="lightblue200"&gt;#81d4fa&lt;/Color&gt;
+        &lt;Color name="lightblue300"&gt;#4fc3f7&lt;/Color&gt;
+        &lt;Color name="lightblue400"&gt;#29b6f6&lt;/Color&gt;
+        &lt;Color name="lightblue500"&gt;#03a9f4&lt;/Color&gt;
+        &lt;Color name="lightblue600"&gt;#039be5&lt;/Color&gt;
+        &lt;Color name="lightblue700"&gt;#0288d1&lt;/Color&gt;
+        &lt;Color name="lightblue800"&gt;#0277bd&lt;/Color&gt;
+        &lt;Color name="lightblue900"&gt;#01579b&lt;/Color&gt;
+        &lt;Color name="lightbluea100"&gt;#80d8ff&lt;/Color&gt;
+        &lt;Color name="lightbluea200"&gt;#40c4ff&lt;/Color&gt;
+        &lt;Color name="lightbluea400"&gt;#00b0ff&lt;/Color&gt;
+        &lt;Color name="lightbluea700"&gt;#0091ea&lt;/Color&gt;   
+
+        &lt;Color name="cyan50"&gt;#e0f7fa&lt;/Color&gt;
+        &lt;Color name="cyan100"&gt;#b2ebf2&lt;/Color&gt;
+        &lt;Color name="cyan200"&gt;#80deea&lt;/Color&gt;
+        &lt;Color name="cyan300"&gt;#4dd0e1&lt;/Color&gt;
+        &lt;Color name="cyan400"&gt;#26c6da&lt;/Color&gt;
+        &lt;Color name="cyan500"&gt;#00bcd4&lt;/Color&gt;
+        &lt;Color name="cyan600"&gt;#00acc1&lt;/Color&gt;
+        &lt;Color name="cyan700"&gt;#0097a7&lt;/Color&gt;
+        &lt;Color name="cyan800"&gt;#00838f&lt;/Color&gt;
+        &lt;Color name="cyan900"&gt;#006064&lt;/Color&gt;
+        &lt;Color name="cyana100"&gt;#84ffff&lt;/Color&gt;
+        &lt;Color name="cyana200"&gt;#18ffff&lt;/Color&gt;
+        &lt;Color name="cyana400"&gt;#00e5ff&lt;/Color&gt;
+        &lt;Color name="cyana700"&gt;#00b8d4&lt;/Color&gt;
+
+        &lt;Color name="teal50"&gt;#e0f2f1&lt;/Color&gt;
+        &lt;Color name="teal100"&gt;#b2dfdb&lt;/Color&gt;
+        &lt;Color name="teal200"&gt;#80cbc4&lt;/Color&gt;
+        &lt;Color name="teal300"&gt;#4db6ac&lt;/Color&gt;
+        &lt;Color name="teal400"&gt;#26a69a&lt;/Color&gt;
+        &lt;Color name="teal500"&gt;#009688&lt;/Color&gt;
+        &lt;Color name="teal600"&gt;#00897b&lt;/Color&gt;
+        &lt;Color name="teal700"&gt;#00796b&lt;/Color&gt;
+        &lt;Color name="teal800"&gt;#00695c&lt;/Color&gt;
+        &lt;Color name="teal900"&gt;#004d40&lt;/Color&gt;
+        &lt;Color name="teala100"&gt;#a7ffeb&lt;/Color&gt;
+        &lt;Color name="teala200"&gt;#64ffda&lt;/Color&gt;
+        &lt;Color name="teala400"&gt;#1de9b6&lt;/Color&gt;
+        &lt;Color name="teala700"&gt;#00bfa5&lt;/Color&gt;
+
+        &lt;Color name="green50"&gt;#d0f8ce&lt;/Color&gt;
+        &lt;Color name="green100"&gt;#a3e9a4&lt;/Color&gt;
+        &lt;Color name="green200"&gt;#72d572&lt;/Color&gt;
+        &lt;Color name="green300"&gt;#42bd41&lt;/Color&gt;
+        &lt;Color name="green400"&gt;#2baf2b&lt;/Color&gt;
+        &lt;Color name="green500"&gt;#259b24&lt;/Color&gt;
+        &lt;Color name="green600"&gt;#0a8f08&lt;/Color&gt;
+        &lt;Color name="green700"&gt;#0a7e07&lt;/Color&gt;
+        &lt;Color name="green800"&gt;#056f00&lt;/Color&gt;
+        &lt;Color name="green900"&gt;#0d5302&lt;/Color&gt;
+        &lt;Color name="greena100"&gt;#a2f78d&lt;/Color&gt;
+        &lt;Color name="greena200"&gt;#5af158&lt;/Color&gt;
+        &lt;Color name="greena400"&gt;#14e715&lt;/Color&gt;
+        &lt;Color name="greena700"&gt;#12c700&lt;/Color&gt;
+
+        &lt;Color name="lightgreen50"&gt;#f1f8e9&lt;/Color&gt;
+        &lt;Color name="lightgreen100"&gt;#dcedc8&lt;/Color&gt;
+        &lt;Color name="lightgreen200"&gt;#c5e1a5&lt;/Color&gt;
+        &lt;Color name="lightgreen300"&gt;#aed581&lt;/Color&gt;
+        &lt;Color name="lightgreen400"&gt;#9ccc65&lt;/Color&gt;
+        &lt;Color name="lightgreen500"&gt;#8bc34a&lt;/Color&gt;
+        &lt;Color name="lightgreen600"&gt;#7cb342&lt;/Color&gt;
+        &lt;Color name="lightgreen700"&gt;#689f38&lt;/Color&gt;
+        &lt;Color name="lightgreen800"&gt;#558b2f&lt;/Color&gt;
+        &lt;Color name="lightgreen900"&gt;#33691e&lt;/Color&gt;
+        &lt;Color name="lightgreena100"&gt;#ccff90&lt;/Color&gt;
+        &lt;Color name="lightgreena200"&gt;#b2ff59&lt;/Color&gt;
+        &lt;Color name="lightgreena400"&gt;#76ff03&lt;/Color&gt;
+        &lt;Color name="lightgreena700"&gt;#64dd17&lt;/Color&gt;
+
+        &lt;Color name="lime50"&gt;#f9fbe7&lt;/Color&gt;
+        &lt;Color name="lime100"&gt;#f0f4c3&lt;/Color&gt;
+        &lt;Color name="lime200"&gt;#e6ee9c&lt;/Color&gt;
+        &lt;Color name="lime300"&gt;#dce775&lt;/Color&gt;
+        &lt;Color name="lime400"&gt;#d4e157&lt;/Color&gt;
+        &lt;Color name="lime500"&gt;#cddc39&lt;/Color&gt;
+        &lt;Color name="lime600"&gt;#c0ca33&lt;/Color&gt;
+        &lt;Color name="lime700"&gt;#afb42b&lt;/Color&gt;
+        &lt;Color name="lime800"&gt;#9e9d24&lt;/Color&gt;
+        &lt;Color name="lime900"&gt;#827717&lt;/Color&gt;
+        &lt;Color name="limea100"&gt;#f4ff81&lt;/Color&gt;
+        &lt;Color name="limea200"&gt;#eeff41&lt;/Color&gt;
+        &lt;Color name="limea400"&gt;#c6ff00&lt;/Color&gt;
+        &lt;Color name="limea700"&gt;#aeea00&lt;/Color&gt;
+
+        &lt;Color name="yellow50"&gt;#fffde7&lt;/Color&gt;
+        &lt;Color name="yellow100"&gt;#fff9c4&lt;/Color&gt;
+        &lt;Color name="yellow200"&gt;#fff59d&lt;/Color&gt;
+        &lt;Color name="yellow300"&gt;#fff176&lt;/Color&gt;
+        &lt;Color name="yellow400"&gt;#ffee58&lt;/Color&gt;
+        &lt;Color name="yellow500"&gt;#ffeb3b&lt;/Color&gt;
+        &lt;Color name="yellow600"&gt;#fdd835&lt;/Color&gt;
+        &lt;Color name="yellow700"&gt;#fbc02d&lt;/Color&gt;
+        &lt;Color name="yellow800"&gt;#f9a825&lt;/Color&gt;
+        &lt;Color name="yellow900"&gt;#f57f17&lt;/Color&gt;
+        &lt;Color name="yellowa100"&gt;#ffff8d&lt;/Color&gt;
+        &lt;Color name="yellowa200"&gt;#ffff00&lt;/Color&gt;
+        &lt;Color name="yellowa400"&gt;#ffea00&lt;/Color&gt;
+        &lt;Color name="yellowa700"&gt;#ffd600&lt;/Color&gt;   
+
+        &lt;Color name="amber50"&gt;#fff8e1&lt;/Color&gt;
+        &lt;Color name="amber100"&gt;#ffecb3&lt;/Color&gt;
+        &lt;Color name="amber200"&gt;#ffe082&lt;/Color&gt;
+        &lt;Color name="amber300"&gt;#ffd54f&lt;/Color&gt;
+        &lt;Color name="amber400"&gt;#ffca28&lt;/Color&gt;
+        &lt;Color name="amber500"&gt;#ffc107&lt;/Color&gt;
+        &lt;Color name="amber600"&gt;#ffb300&lt;/Color&gt;
+        &lt;Color name="amber700"&gt;#ffa000&lt;/Color&gt;
+        &lt;Color name="amber800"&gt;#ff8f00&lt;/Color&gt;
+        &lt;Color name="amber900"&gt;#ff6f00&lt;/Color&gt;
+        &lt;Color name="ambera100"&gt;#ffe57f&lt;/Color&gt;
+        &lt;Color name="ambera200"&gt;#ffd740&lt;/Color&gt;
+        &lt;Color name="ambera400"&gt;#ffc400&lt;/Color&gt;
+        &lt;Color name="ambera700"&gt;#ffab00&lt;/Color&gt;
+
+        &lt;Color name="orange50"&gt;#fff3e0&lt;/Color&gt;
+        &lt;Color name="orange100"&gt;#ffe0b2&lt;/Color&gt;
+        &lt;Color name="orange200"&gt;#ffcc80&lt;/Color&gt;
+        &lt;Color name="orange300"&gt;#ffb74d&lt;/Color&gt;
+        &lt;Color name="orange400"&gt;#ffa726&lt;/Color&gt;
+        &lt;Color name="orange500"&gt;#ff9800&lt;/Color&gt;
+        &lt;Color name="orange600"&gt;#fb8c00&lt;/Color&gt;
+        &lt;Color name="orange700"&gt;#f57c00&lt;/Color&gt;
+        &lt;Color name="orange800"&gt;#ef6c00&lt;/Color&gt;
+        &lt;Color name="orange900"&gt;#e65100&lt;/Color&gt;
+        &lt;Color name="orangea100"&gt;#ffd180&lt;/Color&gt;
+        &lt;Color name="orangea200"&gt;#ffab40&lt;/Color&gt;
+        &lt;Color name="orangea400"&gt;#ff9100&lt;/Color&gt;
+        &lt;Color name="orangea700"&gt;#ff6d00&lt;/Color&gt;
+
+        &lt;Color name="deeporange50"&gt;#fbe9e7&lt;/Color&gt;
+        &lt;Color name="deeporange100"&gt;#ffccbc&lt;/Color&gt;
+        &lt;Color name="deeporange200"&gt;#ffab91&lt;/Color&gt;
+        &lt;Color name="deeporange300"&gt;#ff8a65&lt;/Color&gt;
+        &lt;Color name="deeporange400"&gt;#ff7043&lt;/Color&gt;
+        &lt;Color name="deeporange500"&gt;#ff5722&lt;/Color&gt;
+        &lt;Color name="deeporange600"&gt;#f4511e&lt;/Color&gt;
+        &lt;Color name="deeporange700"&gt;#e64a19&lt;/Color&gt;
+        &lt;Color name="deeporange800"&gt;#d84315&lt;/Color&gt;
+        &lt;Color name="deeporange900"&gt;#bf360c&lt;/Color&gt;
+        &lt;Color name="deeporangea100"&gt;#ff9e80&lt;/Color&gt;
+        &lt;Color name="deeporangea200"&gt;#ff6e40&lt;/Color&gt;
+        &lt;Color name="deeporangea400"&gt;#ff3d00&lt;/Color&gt;
+        &lt;Color name="deeporangea700"&gt;#dd2c00&lt;/Color&gt;
+
+        &lt;Color name="brown50"&gt;#efebe9&lt;/Color&gt;
+        &lt;Color name="brown100"&gt;#d7ccc8&lt;/Color&gt;
+        &lt;Color name="brown200"&gt;#bcaaa4&lt;/Color&gt;
+        &lt;Color name="brown300"&gt;#a1887f&lt;/Color&gt;
+        &lt;Color name="brown400"&gt;#8d6e63&lt;/Color&gt;
+        &lt;Color name="brown500"&gt;#795548&lt;/Color&gt;
+        &lt;Color name="brown600"&gt;#6d4c41&lt;/Color&gt;
+        &lt;Color name="brown700"&gt;#5d4037&lt;/Color&gt;
+        &lt;Color name="brown800"&gt;#4e342e&lt;/Color&gt;
+        &lt;Color name="brown900"&gt;#3e2723&lt;/Color&gt;
+
+        &lt;Color name="grey50"&gt;#fafafa&lt;/Color&gt;
+        &lt;Color name="grey100"&gt;#f5f5f5&lt;/Color&gt;
+        &lt;Color name="grey200"&gt;#eeeeee&lt;/Color&gt;
+        &lt;Color name="grey300"&gt;#e0e0e0&lt;/Color&gt;
+        &lt;Color name="grey400"&gt;#bdbdbd&lt;/Color&gt;
+        &lt;Color name="grey500"&gt;#9e9e9e&lt;/Color&gt;
+        &lt;Color name="grey600"&gt;#757575&lt;/Color&gt;
+        &lt;Color name="grey700"&gt;#616161&lt;/Color&gt;
+        &lt;Color name="grey800"&gt;#424242&lt;/Color&gt;
+        &lt;Color name="grey900"&gt;#212121&lt;/Color&gt;
+        &lt;Color name="grey1000"&gt;#000000&lt;/Color&gt;
+
+        &lt;Color name="bluegrey50"&gt;#eceff1&lt;/Color&gt;
+        &lt;Color name="bluegrey100"&gt;#cfd8dc&lt;/Color&gt;
+        &lt;Color name="bluegrey200"&gt;#b0bec5&lt;/Color&gt;
+        &lt;Color name="bluegrey300"&gt;#90a4ae&lt;/Color&gt;
+        &lt;Color name="bluegrey400"&gt;#78909c&lt;/Color&gt;
+        &lt;Color name="bluegrey500"&gt;#607d8b&lt;/Color&gt;
+        &lt;Color name="bluegrey600"&gt;#546e7a&lt;/Color&gt;
+        &lt;Color name="bluegrey700"&gt;#455a64&lt;/Color&gt;
+        &lt;Color name="bluegrey800"&gt;#37474f&lt;/Color&gt;
+        &lt;Color name="bluegrey900"&gt;#263238&lt;/Color&gt;
+    &lt;/ColorSet&gt;
+&lt;/LColorConfig&gt;</value>
+  </data>
+  <data name="ThemeConfig" xml:space="preserve">
+    <value>&lt;?xml version="1.0"?&gt;
+&lt;LThemeConfig&gt;
+    &lt;ThemeSet&gt;
+        &lt;theme name="Teal"&gt;
+            &lt;PrimaryColor value="#009688"/&gt;
+            &lt;SecondaryColor value="#00BFA5"/&gt;
+        &lt;/theme&gt;
+        &lt;theme name="Light Blue"&gt;
+            &lt;PrimaryColor value="#03A9F4"/&gt;
+            &lt;SecondaryColor value="#0091EA"/&gt;
+        &lt;/theme&gt;
+        &lt;theme name="Cyan"&gt;
+            &lt;PrimaryColor value="#00BCD4"/&gt;
+            &lt;SecondaryColor value="#00B8D4"/&gt;
+        &lt;/theme&gt;
+        &lt;theme name="Red"&gt;
+            &lt;PrimaryColor value="#F44336"/&gt;
+            &lt;SecondaryColor value="#D50000"/&gt;
+        &lt;/theme&gt;
+        &lt;theme name="Pink"&gt;
+            &lt;PrimaryColor value="#E91E63"/&gt;
+            &lt;SecondaryColor value="#C51162"/&gt;
+        &lt;/theme&gt;
+        &lt;theme name="Purple"&gt;
+            &lt;PrimaryColor value="#9C27B0"/&gt;
+            &lt;SecondaryColor value="#AA00FF"/&gt;
+        &lt;/theme&gt;
+    &lt;/ThemeSet&gt;
+&lt;/LThemeConfig&gt;</value>
+  </data>
+  <data name="KGMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\酷狗音乐.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NEMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\网易云音乐.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QQMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QQ音乐.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JSCode" xml:space="preserve">
+    <value>var b = function (a, b) {
+    for (var d = 0; d &lt; b.length - 2; d += 3) {
+        var c = b.charAt(d + 2),
+            c = "a" &lt;= c ? c.charCodeAt(0) - 87 : Number(c),
+            c = "+" == b.charAt(d + 1) ? a &gt;&gt;&gt; c : a &lt;&lt; c;
+        a = "+" == b.charAt(d) ? a + c &amp; 4294967295 : a ^ c
+    }
+    return a
+}
+ 
+var tk =  function (a,TKK) {
+    for (var e = TKK.split("."), h = Number(e[0]) || 0, g = [], d = 0, f = 0; f &lt; a.length; f++) {
+        var c = a.charCodeAt(f);
+        128 &gt; c ? g[d++] = c : (2048 &gt; c ? g[d++] = c &gt;&gt; 6 | 192 : (55296 == (c &amp; 64512) &amp;&amp; f + 1 &lt; a.length &amp;&amp; 56320 == (a.charCodeAt(f + 1) &amp; 64512) ? (c = 65536 + ((c &amp; 1023) &lt;&lt; 10) + (a.charCodeAt(++f) &amp; 1023), g[d++] = c &gt;&gt; 18 | 240, g[d++] = c &gt;&gt; 12 &amp; 63 | 128) : g[d++] = c &gt;&gt; 12 | 224, g[d++] = c &gt;&gt; 6 &amp; 63 | 128), g[d++] = c &amp; 63 | 128)
+    }
+    a = h;
+    for (d = 0; d &lt; g.length; d++) a += g[d], a = b(a, "+-a^+6");
+    a = b(a, "+-3^+b+-f");
+    a ^= Number(e[1]) || 0;
+    0 &gt; a &amp;&amp; (a = (a &amp; 2147483647) + 2147483648);
+    a %= 1E6;
+    return a.toString() + "." + (a ^ h)
+}</value>
+  </data>
+  <data name="_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.jfif;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2.jfif;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3.jfif;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4.jfif;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5.jfif;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6.jfif;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

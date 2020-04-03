@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\吴先生\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\吴先生\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_LrcEditor.-2142269513.00" t="ExcludeRecursive" />
+    <e p="E:\Mp\C#.NET\LrcEditor" t="IncludeFlat">
+      <e p="LrcEditor" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="LrcDisplay.xaml" t="Include" />
+        <e p="LrcDisplay.xaml.cs" t="Include" />
+        <e p="LrcEditor.csproj" t="IncludeRecursive" />
+        <e p="lyric.cs" t="Include" />
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="search.cs" t="Include" />
+      </e>
+      <e p="LrcEditor.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
