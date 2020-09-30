@@ -76,12 +76,16 @@ namespace LrcEditor
                     return true;
                 });
             }
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(result.b_PicUrl);
-            MemoryStream stream = StreamToMemoryStream(request.GetResponse().GetResponseStream());
-            PicData = new byte[stream.Length];
-            stream.Seek(0, SeekOrigin.Begin);
-            stream.Read(PicData, 0, PicData.Length);
-            stream.Close();
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(result.b_PicUrl);
+                MemoryStream stream = StreamToMemoryStream(request.GetResponse().GetResponseStream());
+                PicData = new byte[stream.Length];
+                stream.Seek(0, SeekOrigin.Begin);
+                stream.Read(PicData, 0, PicData.Length);
+                stream.Close();
+            }
+            catch { }
             DownloadFisishHandler.Invoke();
         }
 

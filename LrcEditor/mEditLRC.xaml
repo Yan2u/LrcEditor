@@ -18,16 +18,16 @@
         <StackPanel Grid.Row="1" Margin="10,0,10,0">
             <TextBlock Text="时间轴：" FontSize="20" FontWeight="Bold" />
             <StackPanel  Orientation="Horizontal">
-                <TextBox Grid.Row="1" VerticalAlignment="Center" MinWidth="128" Margin="20,5,20,5" x:Name="mEditMinute" FontSize="20" FontFamily="/Resources/苹方黑体-中粗-简.ttf#.萍方-简"  materialDesign:HintAssist.Hint="Minute"/>
+                <TextBox Grid.Row="1" VerticalAlignment="Center" MinWidth="128" Margin="20,5,20,5" x:Name="mEditMinute" FontSize="20" FontFamily="/Resources/Roboto-Regular.ttf#Roboto"  materialDesign:HintAssist.Hint="Minute"/>
                 <TextBlock Grid.Row="1" VerticalAlignment="Center" Margin="50,5,20,5" Text=":" FontSize="30" FontFamily="consolas" />
-                <TextBox Grid.Row="1" VerticalAlignment="Center" MinWidth="128" Margin="30,5,20,5" x:Name="mEditSecond" FontSize="20" FontFamily="/Resources/苹方黑体-中粗-简.ttf#.萍方-简"  materialDesign:HintAssist.Hint="Second"/>
+                <TextBox Grid.Row="1" VerticalAlignment="Center" MinWidth="128" Margin="30,5,20,5" x:Name="mEditSecond" FontSize="20" FontFamily="/Resources/Roboto-Regular.ttf#Roboto"  materialDesign:HintAssist.Hint="Second"/>
                 <TextBlock Grid.Row="1" VerticalAlignment="Center" Margin="50,5,20,5" Text="." FontSize="30" FontFamily="consolas" />
-                <TextBox Grid.Row="1" VerticalAlignment="Center" MinWidth="128" Margin="30,5,20,5" x:Name="mEditMultiSecond" FontSize="20" FontFamily="/Resources/苹方黑体-中粗-简.ttf#.萍方-简" materialDesign:HintAssist.Hint="MultiSecond"/>
+                <TextBox Grid.Row="1" VerticalAlignment="Center" MinWidth="128" Margin="30,5,20,5" x:Name="mEditMultiSecond" FontSize="20" FontFamily="/Resources/Roboto-Regular.ttf#Roboto" materialDesign:HintAssist.Hint="MultiSecond"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Row="2" Margin="10,0,10,0">
             <TextBlock Text="歌词：" Margin="0,0,0,10" FontSize="20"  FontWeight="Bold" />
-            <TextBox FontFamily="/Resources/苹方黑体-中粗-简.ttf#.萍方-简"  x:Name="mEditContent" FontSize="20"  Margin="30,-5,30,0" VerticalAlignment="Center" materialDesign:HintAssist.Hint="Content" ToolTip="确定" AcceptsReturn="False" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+            <TextBox FontFamily="/Resources/Roboto-Regular.ttf#Roboto"  x:Name="mEditContent" FontSize="20"  Margin="30,-5,30,0" VerticalAlignment="Center" materialDesign:HintAssist.Hint="Content" ToolTip="确定" AcceptsReturn="False" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="10,0,10,0">
             <Button x:Name="btnSure" Style="{StaticResource MaterialDesignFloatingActionLightButton}" Margin="150,0,150,0" VerticalAlignment="Center" ToolTip="确定" Click="Button_Click_Sure">

@@ -8,71 +8,65 @@
              mc:Ignorable="d" Height="506.008" Width="874.356">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="67*" />
+            <RowDefinition Height="60*" />
             <RowDefinition Height="383*" />
         </Grid.RowDefinitions>
-        <materialDesign:Card Margin="5">
-            <Grid>
-                <TextBlock FontSize="24" VerticalAlignment="Center" Margin="20,13,155,13" Text="About - LrcEditor" />
-                <Button x:Name="UIBtn_Copy" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Margin="808,8,10,10">
-                    <materialDesign:PackIcon Kind="Close" />
-                </Button>
-            </Grid>
-        </materialDesign:Card>
-        <materialDesign:Card Grid.Row="1" Margin="8">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <!---
+        <Grid Margin="5,5,0,0">
+            <TextBlock FontSize="24" VerticalAlignment="Center" Margin="20,13,155,13" Text="About - LrcEditor" />
+            <Button x:Name="UIBtn_Copy" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Margin="808,8,10,10">
+                <materialDesign:PackIcon Kind="Close" />
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1" Margin="8,0,8,8">
+            <Grid.RowDefinitions>
+                <!---
                     UI,搜索接口,翻译,音乐
                     -->
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75*"/>
+                <ColumnDefinition Width="68*"/>
+            </Grid.ColumnDefinitions>
+            <materialDesign:Card Grid.Row="0" Grid.Column="1" Margin="10,0,10,0" Background="Transparent">
+                <Image Source="/Resources/logo.png" Stretch="Fill" />
+            </materialDesign:Card>
+            <Grid Margin="10,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="75*"/>
-                    <ColumnDefinition Width="68*"/>
+                    <ColumnDefinition Width="0.8*"/>
+                    <ColumnDefinition Width="0.2*"/>
                 </Grid.ColumnDefinitions>
-                <materialDesign:Card Grid.Row="0" Grid.Column="1" Margin="10">
-                    <Image Source="/Resources/logo.png" Stretch="Fill" />
-                </materialDesign:Card>
-                <materialDesign:Card Margin="10">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.8*"/>
-                            <ColumnDefinition Width="0.2*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Text="鸣谢：" FontSize="16" Margin="20,0,0,0" VerticalAlignment="Center" Grid.Row="0"  />
-                        <Separator Style="{StaticResource MaterialDesignDarkSeparator}" Grid.Column="0" Grid.ColumnSpan="2"  Grid.Row="0" Margin="0,58" Grid.RowSpan="2" />
-                        <TextBlock Text="UI：MaterialDesign Themes" FontSize="16" Margin="20,0,0,0" VerticalAlignment="Center" Grid.Row="1"  />
-                        <TextBlock Text="PlayerModule：LRCEditor" FontSize="16" Margin="20,0,0,0" VerticalAlignment="Center" Grid.Row="2"  />
-                        <TextBlock Text="播放器核心：CSCore" FontSize="16" Margin="20,0,0,0" VerticalAlignment="Center" Grid.Row="3"  />
-                        <TextBlock Text="翻译：C#实现谷歌翻译API - Marso" FontSize="16" Margin="20,0,0,0" VerticalAlignment="Center" Grid.Row="4"  />
-                        <TextBlock Text="酷狗音乐搜索接口：MessAPI" FontSize="16" Margin="20,0,0,0" VerticalAlignment="Center" Grid.Row="5"  />
-                        <Button x:Name="UIBtn" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="1" Grid.Column="1" Click="UIBtn_Click">
-                            <materialDesign:PackIcon Kind="OpenInBrowser" />
-                        </Button>
-                        <Button x:Name="PlayerModuleBtn" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="2" Grid.Column="1" Click="PlayerModuleBtn_Click">
-                            <materialDesign:PackIcon Kind="OpenInBrowser" />
-                        </Button>
-                        <Button x:Name="CSCoreBtn" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="3" Grid.Column="1" Click="CSCoreBtn_Click">
-                            <materialDesign:PackIcon Kind="OpenInBrowser" />
-                        </Button>
-                        <Button x:Name="TrnsBtn" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="4" Grid.Column="1" Click="TrnsBtn_Click">
-                            <materialDesign:PackIcon Kind="OpenInBrowser" />
-                        </Button>
-                        <Button x:Name="MusicUIBtn" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="5" Grid.Column="1" Click="MusicUIBtn_Click">
-                            <materialDesign:PackIcon Kind="OpenInBrowser" />
-                        </Button>
-                    </Grid>
-                </materialDesign:Card>
+                <TextBlock Text="鸣谢：" FontSize="16" Margin="20,0,0,0" VerticalAlignment="Center" Grid.Row="0"  />
+                <Separator Style="{StaticResource MaterialDesignDarkSeparator}" Grid.Column="0" Grid.ColumnSpan="2"  Grid.Row="0" Margin="0,38" Grid.RowSpan="2" />
+                <TextBlock Text="UI：MaterialDesign Themes" FontSize="16" Margin="20,0,0,0" VerticalAlignment="Center" Grid.Row="1"  />
+                <TextBlock Text="PlayerModule：LRCEditor" FontSize="16" Margin="20,0,0,0" VerticalAlignment="Center" Grid.Row="2"  />
+                <TextBlock Text="播放器核心：CSCore" FontSize="16" Margin="20,0,0,0" VerticalAlignment="Center" Grid.Row="3"  />
+                <TextBlock Text="翻译：C#实现谷歌翻译API - Marso" FontSize="16" Margin="20,0,0,0" VerticalAlignment="Center" Grid.Row="4"  />
+                <TextBlock Text="酷狗音乐搜索接口：MessAPI" FontSize="16" Margin="20,0,0,0" VerticalAlignment="Center" Grid.Row="5"  />
+                <Button x:Name="UIBtn" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="1" Grid.Column="1" Click="UIBtn_Click">
+                    <materialDesign:PackIcon Kind="OpenInBrowser" />
+                </Button>
+                <Button x:Name="PlayerModuleBtn" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="2" Grid.Column="1" Click="PlayerModuleBtn_Click">
+                    <materialDesign:PackIcon Kind="OpenInBrowser" />
+                </Button>
+                <Button x:Name="CSCoreBtn" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="3" Grid.Column="1" Click="CSCoreBtn_Click">
+                    <materialDesign:PackIcon Kind="OpenInBrowser" />
+                </Button>
+                <Button x:Name="TrnsBtn" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="4" Grid.Column="1" Click="TrnsBtn_Click">
+                    <materialDesign:PackIcon Kind="OpenInBrowser" />
+                </Button>
+                <Button x:Name="MusicUIBtn" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="5" Grid.Column="1" Click="MusicUIBtn_Click">
+                    <materialDesign:PackIcon Kind="OpenInBrowser" />
+                </Button>
             </Grid>
-        </materialDesign:Card>
+        </Grid>
     </Grid>
 </UserControl>

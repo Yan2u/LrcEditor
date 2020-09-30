@@ -54,7 +54,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>bitbug_favicon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>A660D11548EFBA2AC6F64A95FB17F2319B1D3154</ManifestCertificateThumbprint>
@@ -206,7 +207,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Resource Include="Resources\苹方黑体-中粗-简.ttf" />
+    <Resource Include="Resources\Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -254,9 +255,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\slogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="bitbug_favicon.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1.jfif" />

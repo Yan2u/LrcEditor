@@ -7,9 +7,9 @@
              xmlns:local="clr-namespace:LrcEditor"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" Width="678.627" Height="474.648">
-    <Grid>
+    <Grid Margin="0,8,0,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="19*" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="125*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -22,63 +22,65 @@
             <ColumnDefinition Width="156*" />
         </Grid.ColumnDefinitions>
         <Border CornerRadius="25"/>
-        <TextBlock Text="歌曲详情" FontSize="20px" Margin="13,15,0,0" />
+        <TextBlock Text="歌曲详情" FontSize="20px" FontWeight="Bold" VerticalAlignment="Center" Margin="20,0,0,0" />
         <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="0" Grid.Column="6" x:Name="CloseBtn" Click="CloseBtn_Click" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <materialDesign:PackIcon Kind="Close"/>
         </Button>
-        <materialDesign:Card Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7" Margin="5"  UniformCornerRadius="5">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="133*"/>
-                    <RowDefinition Height="134*"/>
-                    <RowDefinition Height="137*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5*" />
-                    <ColumnDefinition Width="4*" />
-                </Grid.ColumnDefinitions>
-                <materialDesign:DialogHost Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="2" x:Name="DownloadDialog">
-                    <materialDesign:DialogHost.DialogContent>
-                        <StackPanel Margin="16">
-                            <StackPanel Orientation="Horizontal" MinWidth="512" Margin="0,10,0,10">
-                                <TextBlock Text="{Binding ElementName=LDetailUserControl, Path=result.b_SongName,StringFormat='下载 {0} ...',FallbackValue='Unknown'}"/>
-                                <TextBlock Text="{Binding ElementName=LDetailUserControl, Path=mPercentage,StringFormat='已下载： {0}% ',FallbackValue='0%'}"/>
-                                <Button x:Name="CancelDownloadBtn" Style="{StaticResource MaterialDesignFlatButton}" Content="取消" Margin="256,0,10,0" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Click="CancelDownloadBtn_Click"/>
-                            </StackPanel>
-                            <ProgressBar x:Name="DownloadProgressBar" MinWidth="512" Minimum="0" Maximum="100" MinHeight="10" Margin="0,10,0,10" Value="{Binding mPercentage}"/>
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7" Margin="5,0,5,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="133*"/>
+                <RowDefinition Height="134*"/>
+                <RowDefinition Height="137*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+            <materialDesign:DialogHost Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="2" x:Name="DownloadDialog">
+                <materialDesign:DialogHost.DialogContent>
+                    <StackPanel Margin="16">
+                        <StackPanel Orientation="Horizontal" MinWidth="512" Margin="0,10,0,10">
+                            <TextBlock Text="{Binding ElementName=LDetailUserControl, Path=result.b_SongName,StringFormat='下载 {0} ...',FallbackValue='Unknown'}"/>
+                            <TextBlock Text="{Binding ElementName=LDetailUserControl, Path=mPercentage,StringFormat='已下载： {0}% ',FallbackValue='0%'}"/>
+                            <Button x:Name="CancelDownloadBtn" Style="{StaticResource MaterialDesignFlatButton}" Content="取消" Margin="256,0,10,0" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Click="CancelDownloadBtn_Click"/>
                         </StackPanel>
-                    </materialDesign:DialogHost.DialogContent>
-                </materialDesign:DialogHost>
-                <Image x:Name="AlbumImg" Grid.Row="0" Grid.Column="0" Margin="8" Grid.RowSpan="3" Stretch="UniformToFill" Source="/Resources/6.jfif">
-                    <Image.ContextMenu>
-                        <ContextMenu>
-                            <MenuItem Header="复制到剪贴板" x:Name="ImgCopy" Click="ImgCopy_Click" >
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="ContentCopy"/>
-                                </MenuItem.Icon>
-                            </MenuItem>
-                        </ContextMenu>
-                    </Image.ContextMenu>
-                </Image>
-                <ScrollViewer Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Margin="8">
-                    <StackPanel Orientation="Vertical"  x:Name="DetailInfoPanel" ScrollViewer.VerticalScrollBarVisibility="Hidden">
-                        <TextBlock Text="歌曲" HorizontalAlignment="Center" FontSize="20px" Margin="0,6,0,0" />
-                        <TextBlock Text="{Binding ElementName=LDetailUserControl,Path=result.b_SongName,FallbackValue='Unknown'}" HorizontalAlignment="Center" FontSize="20px" TextWrapping="Wrap" FontWeight="Bold" Margin="0,10,0,20" />
-                        <TextBlock Text="歌手" HorizontalAlignment="Center" FontSize="20px" Margin="0,6,0,0" />
-                        <TextBlock Text="{Binding ElementName=LDetailUserControl,Path=result.b_SongArtist,FallbackValue='Unknown'}" HorizontalAlignment="Center" FontSize="20px" TextWrapping="Wrap" FontWeight="Bold" Margin="0,10,0,20" />
-                        <TextBlock Text="专辑" HorizontalAlignment="Center" FontSize="20px" Margin="0,6,0,0" />
-                        <TextBlock Text="{Binding ElementName=LDetailUserControl,Path=result.b_SongAlbum,FallbackValue='Unknown'}" HorizontalAlignment="Center" FontSize="20px" TextWrapping="Wrap" FontWeight="Bold" Margin="0,10,0,20" />
-                        <TextBlock Text="时长" HorizontalAlignment="Center" FontSize="20px" Margin="0,6,0,0" />
-                        <TextBlock Text="{Binding ElementName=LDetailUserControl,Path=result.b_SongDuration,FallbackValue='0 min 0 s'}" HorizontalAlignment="Center" FontSize="20px" TextWrapping="Wrap" FontWeight="Bold" Margin="0,10,0,20" />
+                        <ProgressBar x:Name="DownloadProgressBar" MinWidth="512" Minimum="0" Maximum="100" MinHeight="10" Margin="0,10,0,10" Value="{Binding mPercentage}"/>
                     </StackPanel>
-                </ScrollViewer>
-                <materialDesign:Snackbar x:Name="SnakeB" Grid.Row="2" Grid.ColumnSpan="2" Height="50" IsActive="False"  HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                    
-                </materialDesign:Snackbar>
-            </Grid>
-        </materialDesign:Card>
+                </materialDesign:DialogHost.DialogContent>
+            </materialDesign:DialogHost>
+            <Border x:Name="imgBorder" Grid.Row="0" Grid.Column="0" Margin="8,8,8,8" Grid.RowSpan="3" Background="White" CornerRadius="5"/>
+            <Image x:Name="AlbumImg" Grid.Row="0" Grid.Column="0" Margin="8,8,8,8" Grid.RowSpan="3" Stretch="Fill" Source="/Resources/6.jfif">
+                <Image.OpacityMask>
+                    <VisualBrush Visual="{Binding ElementName=imgBorder, Mode=OneTime}" />
+                </Image.OpacityMask>
+                <Image.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="复制到剪贴板" x:Name="ImgCopy" Click="ImgCopy_Click" >
+                            <MenuItem.Icon>
+                                <materialDesign:PackIcon Kind="ContentCopy"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </Image.ContextMenu>
+            </Image>
+            <ScrollViewer Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Margin="8,8,8,8">
+                <StackPanel Orientation="Vertical"  x:Name="DetailInfoPanel" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                    <TextBlock Text="歌曲" HorizontalAlignment="Center" FontSize="20px" Margin="0,6,0,0" />
+                    <TextBlock Text="{Binding ElementName=LDetailUserControl,Path=result.b_SongName,FallbackValue='Unknown'}" HorizontalAlignment="Center" FontSize="20px" TextWrapping="Wrap" FontWeight="Bold" Margin="0,10,0,20" />
+                    <TextBlock Text="歌手" HorizontalAlignment="Center" FontSize="20px" Margin="0,6,0,0" />
+                    <TextBlock Text="{Binding ElementName=LDetailUserControl,Path=result.b_SongArtist,FallbackValue='Unknown'}" HorizontalAlignment="Center" FontSize="20px" TextWrapping="Wrap" FontWeight="Bold" Margin="0,10,0,20" />
+                    <TextBlock Text="专辑" HorizontalAlignment="Center" FontSize="20px" Margin="0,6,0,0" />
+                    <TextBlock Text="{Binding ElementName=LDetailUserControl,Path=result.b_SongAlbum,FallbackValue='Unknown'}" HorizontalAlignment="Center" FontSize="20px" TextWrapping="Wrap" FontWeight="Bold" Margin="0,10,0,20" />
+                    <TextBlock Text="时长" HorizontalAlignment="Center" FontSize="20px" Margin="0,6,0,0" />
+                    <TextBlock Text="{Binding ElementName=LDetailUserControl,Path=result.b_SongDuration,FallbackValue='0 min 0 s'}" HorizontalAlignment="Center" FontSize="20px" TextWrapping="Wrap" FontWeight="Bold" Margin="0,10,0,20" />
+                </StackPanel>
+            </ScrollViewer>
+            <materialDesign:Snackbar x:Name="SnakeB" Grid.Row="2" Grid.ColumnSpan="2" Height="50" IsActive="False"  HorizontalAlignment="Center" VerticalAlignment="Bottom">
+
+            </materialDesign:Snackbar>
+        </Grid>
         <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="OnlinePage_Click"  ToolTip="打开在线页面" Grid.Column="1">
-            <materialDesign:PackIcon Kind="Web"/>
+            <materialDesign:PackIcon Kind="Web"/> 
         </Button>
         <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="OnlineMusic_Click"  ToolTip="打开在线音乐文件网址" Grid.Column="2">
             <materialDesign:PackIcon Kind="FileAccountOutline"/>

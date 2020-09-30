@@ -559,15 +559,7 @@
     &lt;/ThemeSet&gt;
 &lt;/LThemeConfig&gt;</value>
   </data>
-  <data name="KGMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\酷狗音乐.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="NEMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\网易云音乐.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="QQMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\QQ音乐.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

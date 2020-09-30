@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,10 +35,14 @@ namespace LrcEditor
         public ObservableCollection<LSearchResult> lresult;
         public LSearchEngine le;
         LSearchResult onShowResult;
+        TaskFactory factory;
+        ProgressBar barHolder;
+        LSongDetail detail;
 
         void UpdateResult(LSearchResult newResult, bool finished = false)
         {
-            ResultGrid.Dispatcher.Invoke(new Action(delegate {
+            ResultGrid.Dispatcher.Invoke(new Action(delegate
+            {
                 PCircle.IsIndeterminate = !finished;
                 if (finished) return;
                 lresult.Add(newResult);
@@ -73,11 +78,30 @@ namespace LrcEditor
             SnakeB.IsActive = false;
         }
 
-        async void ShowDetail()
+        void ShowDetail()
         {
-            onShowResult.Specify();
-            var detail = new LSongDetail(onShowResult);
-            await mHost.ShowDialog(detail);
+            if (factory == null) factory = new TaskFactory();
+            if (barHolder == null)
+            {
+                barHolder = new ProgressBar();
+                barHolder.Height = 25;
+                barHolder.Width = 25;
+                barHolder.Style = App.Current.Resources["MaterialDesignCircularProgressBar"] as Style;
+                barHolder.IsIndeterminate = true;
+                barHolder.Value = 50;
+                barHolder.Margin = new Thickness(25);
+            }
+            mHost.ShowDialog(barHolder);
+            Task tSpecify = factory.StartNew(new Action<object>(onShowResult.SpecifyAsync),
+                new Action(() =>
+                {
+                    this.Dispatcher.Invoke(new Action(() =>
+                    {
+                        detail = new LSongDetail(onShowResult);
+                        mHost.IsOpen = false;
+                        mHost.ShowDialog(detail);
+                    }));
+                }));
         }
 
         private void ResultGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)

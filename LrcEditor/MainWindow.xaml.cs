@@ -17,7 +17,6 @@ using Microsoft.Win32;
 using CSCore.SoundOut;
 using System.Threading;
 using System.Resources;
-using MaterialDesignThemes.Wpf;
 using System.Drawing.Imaging;
 
 namespace LrcEditor

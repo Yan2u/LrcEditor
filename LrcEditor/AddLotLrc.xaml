@@ -28,7 +28,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <materialDesign:Card Margin="5" Grid.Row="0" Grid.RowSpan="3">
-                <TextBox Style="{StaticResource MaterialDesignFilledTextFieldTextBox}" x:Name="InputBox" FontSize="15" AcceptsReturn="True" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Type Here..." FontFamily="/Resources/苹方黑体-中粗-简.ttf#.萍方-简">
+                <TextBox Style="{StaticResource MaterialDesignFilledTextFieldTextBox}" x:Name="InputBox" FontSize="15" AcceptsReturn="True" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Type Here..." FontFamily="/Resources/Roboto-Regular.ttf#Roboto">
                 </TextBox>
         </materialDesign:Card>
         <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource MaterialDesignFloatingActionButton}" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_Click" x:Name="SureBtn" >

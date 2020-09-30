@@ -12,10 +12,10 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <Style TargetType="{x:Type TextElement}">
-                <Setter Property="FontFamily" Value="/Resources/苹方黑体-中粗-简.ttf#.萍方-简"/>
+                <Setter Property="FontFamily" Value="/Resources/Roboto-Regular.ttf#Roboto"/>
             </Style>
             <Style TargetType="{x:Type TextBlock}">
-                <!----><Setter Property="FontFamily" Value="/Resources/苹方黑体-中粗-简.ttf#.萍方-简"/>
+                <!----><Setter Property="FontFamily" Value="/Resources/Roboto-Regular.ttf#Roboto"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

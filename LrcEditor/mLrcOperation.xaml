@@ -59,9 +59,9 @@
         <RadioButton FontFamily="/Resources/SourceHanSansCN-Medium.otf#Source Han Sans CN" Grid.Row="1" x:Name="mWholeMatch" FontSize="16" Content="整句匹配" Margin="158,108,524,265"/>
         <RadioButton FontFamily="/Resources/SourceHanSansCN-Medium.otf#Source Han Sans CN" Grid.Row="1" x:Name="mWordMatch" FontSize="16" Content="逐字匹配" Margin="276,108,406,265"/>
         <TextBlock FontSize="20" FontWeight="Bold" Margin="59,147,568,217" Grid.Row="1" Text="搜索的内容：" />
-        <TextBox Grid.Row="1" x:Name="mSearchBox" Style="{StaticResource MaterialDesignFilledTextFieldTextBox}" Margin="177,147,78,137" materialDesign:HintAssist.Hint="Keyword To Search..." FontSize="15" TextWrapping="Wrap" MaxWidth="545" FontFamily="/Resources/苹方黑体-中粗-简.ttf#.萍方-简"/>
+        <TextBox Grid.Row="1" x:Name="mSearchBox" Style="{StaticResource MaterialDesignFilledTextFieldTextBox}" Margin="177,147,78,137" materialDesign:HintAssist.Hint="Keyword To Search..." FontSize="15" TextWrapping="Wrap" MaxWidth="545" FontFamily="/Resources/Roboto-Regular.ttf#Roboto"/>
         <TextBlock FontSize="20" FontWeight="Bold" Margin="59,147,628,217" Grid.Row="1" Text="搜索的内容：" />
-        <TextBox Grid.Row="1" x:Name="mReplaceBox" Style="{StaticResource MaterialDesignFilledTextFieldTextBox}" Margin="177,273,78,11" materialDesign:HintAssist.Hint="Content To Replace..." FontSize="15" TextWrapping="Wrap" MaxWidth="545" FontFamily="/Resources/苹方黑体-中粗-简.ttf#.萍方-简" />
+        <TextBox Grid.Row="1" x:Name="mReplaceBox" Style="{StaticResource MaterialDesignFilledTextFieldTextBox}" Margin="177,273,78,11" materialDesign:HintAssist.Hint="Content To Replace..." FontSize="15" TextWrapping="Wrap" MaxWidth="545" FontFamily="/Resources/Roboto-Regular.ttf#Roboto" />
         <TextBlock FontSize="20" FontWeight="Bold" Margin="59,273,628,91" Grid.Row="1" Text="替换为：" />
         <Button x:Name="mLrcAdjust" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Grid.Row="1" Margin="750,248,10,112" ToolTip="应用歌词替换" Click="MLrcAdjust_Click">
             <materialDesign:PackIcon Kind="TickAll"/>

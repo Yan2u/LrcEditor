@@ -145,7 +145,7 @@
                     </materialDesign:DialogHost.DialogContent>
                 </materialDesign:DialogHost>
                 <Border CornerRadius="8">
-                    <DataGrid x:Name="lrcGrid" AutoGenerateColumns="False" VirtualizingStackPanel.IsVirtualizing="False" CanUserAddRows="False" MouseDoubleClick="LrcGrid_MouseDoubleClick" FontFamily="/Resources/苹方黑体-中粗-简.ttf#.萍方-简">
+                    <DataGrid x:Name="lrcGrid" AutoGenerateColumns="False" VirtualizingStackPanel.IsVirtualizing="False" CanUserAddRows="False" MouseDoubleClick="LrcGrid_MouseDoubleClick" FontFamily="/Resources/Roboto-Regular.ttf#Roboto" FontSize="16px">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="时间轴" Binding="{Binding Timeline, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="0.2*" IsReadOnly="True" CanUserSort="False" />
                             <DataGridTextColumn Header="歌词" Binding="{Binding Word,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="*" IsReadOnly="True" CanUserSort="False" />
@@ -258,8 +258,8 @@
                         <RowDefinition Height="40*"/>
                         <RowDefinition Height="80*"/>
                     </Grid.RowDefinitions>
-                    <Border x:Name="imgBorder" CornerRadius="6" Background="White" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="4"/>
-                    <Image Source="/Resources/5.jfif" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="4" Margin="35,5,35,5" x:Name="AlbumImg" Stretch="UniformToFill">
+                    <Border x:Name="imgBorder" CornerRadius="5" Background="White" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="4"/>
+                    <Image Source="/Resources/5.jfif" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="4" Margin="35,5,35,5" x:Name="AlbumImg" Stretch="Fill">
                         <Image.ContextMenu>
                             <ContextMenu>
                                 <MenuItem Header="复制到剪贴板" x:Name="copyImg" Click="CopyImg_Click">

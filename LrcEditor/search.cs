@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using System.Security.Cryptography;
+using System.Windows;
 
 namespace LrcEditor
 {
@@ -58,12 +59,12 @@ namespace LrcEditor
         /// </summary>
         static readonly string NetEaseMusicSearch = "http://music.163.com/api/search/get?&limit=35&type=1&offset={0}&s={1}";
         static readonly string NetEaseMusicLyric = "http://music.163.com/api/song/lyric?os=pc&lv=-1&kv=-1&tv=-1&id={0}";
-        static readonly string NetEaseMusicAlbum = "http://music.163.com/api/song/detail/?id={0}&ids=[{0}]";
+        static readonly string NetEaseMusicAlbum = "https://api.imjad.cn/cloudmusic/?id={0}&type=album";
         static readonly string NetEaseMusicOnline = "https://music.163.com/#/song?id={0}";
-        static readonly string NetEaseMusicDownload = "http://music.163.com/song/media/outer/url?id={0}";
         static readonly string NetEaseMusicPlay = "https://music.163.com/#/song?id={0}";
-        
-        public static string NetEaseMusic_Search(int page,string word)
+        static readonly string NetEaseMusicDownload = "https://api.imjad.cn/cloudmusic/?id={0}&type=song";
+
+        public static string NetEaseMusic_Search(int page, string word)
         {
             return string.Format(NetEaseMusicSearch, 35 * (page - 1), word);
         }
@@ -104,7 +105,7 @@ namespace LrcEditor
         static readonly string QQMusicLyric = "https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg?-=MusicJsonCallback_lrc&songmid={0}&g_tk=758816886&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq.json&needNewCode=0";
         static readonly string QQMusicPlay = "https://y.qq.com/n/yqq/song/{0}.html";
 
-        public static string QQMusic_Search(int page,string word)
+        public static string QQMusic_Search(int page, string word)
         {
             return string.Format(QQMusicSearch, page, word);
         }
@@ -119,7 +120,7 @@ namespace LrcEditor
             return string.Format(QQMusicToken, song_mid, "C400" + song_mid + ".m4a");
         }
 
-        public static string QQMusic_Download(string song_mid,string vkey)
+        public static string QQMusic_Download(string song_mid, string vkey)
         {
             return string.Format(QQMusicDownload, "C400" + song_mid + ".m4a", vkey);
         }
@@ -143,7 +144,7 @@ namespace LrcEditor
         static readonly string KuGouMusicDetail = "https://www.kugou.com/yy/index.php?r=play/getdata&hash={0}";
         static readonly string KuGouOnlineAddr = "https://www.kugou.com/song/#hash={0}";
 
-        public static string KuGouMusic_Search(int page,string word)
+        public static string KuGouMusic_Search(int page, string word)
         {
             return string.Format(KuGouMusicSearch, page, word);
         }
@@ -158,7 +159,7 @@ namespace LrcEditor
             return string.Format(KuGouOnlineAddr, hash);
         }
 
-        public static string GetResponse(string weburl,bool isqq=false)
+        public static string GetResponse(string weburl, bool isqq = false)
         {
             // 对 Https 访问的安全性指定
             if (weburl.StartsWith("https", StringComparison.OrdinalIgnoreCase))
@@ -172,7 +173,7 @@ namespace LrcEditor
             HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(new Uri(weburl));
             HttpWebResponse Response = (HttpWebResponse)Request.GetResponse();
             string res = "";
-            using(Stream stream = Response.GetResponseStream())
+            using (Stream stream = Response.GetResponseStream())
             {
                 StreamReader sr = new StreamReader(stream, Encoding.UTF8);
                 res = sr.ReadToEnd();
@@ -187,11 +188,11 @@ namespace LrcEditor
         }
 
         // 这个感觉并没有什么用
-       public static T Deserialize<T>(string jsonstr)
-       {
+        public static T Deserialize<T>(string jsonstr)
+        {
             T res = JsonConvert.DeserializeObject<T>(jsonstr);
             return res;
-       }
+        }
     }
 
     // 网易歌词搜索部分
@@ -209,22 +210,15 @@ namespace LrcEditor
         public int id, duration;
         public string name;
         public List<NERS_Artist> artists;
+        public NERS_Album album;
     }
+
+    public struct NERS_Album { public string name; public int id; }
 
     public struct NERS_Songs
     {
         public int songCount;
         public List<NERS_Single> songs;
-    }
-
-    public struct NERA_Single { public string name, picUrl; }
-
-    public struct NERA_Album { public NERA_Single album; }
-
-    public struct NetEaseReturn_Album
-    {
-        public int code;
-        public List<NERA_Album> songs;
     }
 
     public struct NERL_Lyric { public string lyric; }
@@ -233,6 +227,22 @@ namespace LrcEditor
     {
         public int code;
         public NERL_Lyric lrc, tlyric;
+    }
+
+    public struct NERD_Data { public string url; }
+
+    public struct NetEaseReturn_Download
+    {
+        public List<NERD_Data> data;
+    }
+
+    public struct NERP_Al { public string picUrl; }
+
+    public struct NERP_Data { public NERP_Al al; }
+
+    public struct NetEaseReturn_Pic
+    {
+        public List<NERP_Data> songs;
     }
 
     // QQ音乐搜索部分
@@ -254,7 +264,7 @@ namespace LrcEditor
         public List<QMRS_Single> list;
         public int totalnum;
     }
-    
+
     public struct QMRS_Songs { public QMRS_Data song; }
 
     public struct QQMusicReturn_Song
@@ -273,7 +283,7 @@ namespace LrcEditor
     public struct QMRST_Single { public List<QMRST_Data> items; }
 
     public struct QQMusicReturn_Token { public QMRST_Single data; }
-    
+
     // 酷狗音乐搜索部分 
 
     public struct KGRS_Single
@@ -310,7 +320,7 @@ namespace LrcEditor
     /// 搜索结果，对不同搜索引擎返回的数据格式进行统一，此类被绑定到前端显示
     /// 此类被绑定到前端，为了实现 Bingding 的实时更新，需要实现 INotifyPropertyChanged 接口 
     /// </summary>
-    public class LSearchResult  : INotifyPropertyChanged
+    public class LSearchResult : INotifyPropertyChanged
     {
         // 源数据
         string SongName;
@@ -321,7 +331,8 @@ namespace LrcEditor
         Uri PicUrl;
         Uri FileUrl;
         Uri OnlinePlayUrl;
-        public int SongID;
+        int albumID; // netease
+        int SongID;
         int SongDuration;
         public event PropertyChangedEventHandler PropertyChanged;
         static readonly Uri DefaultUrl = new Uri("https://www.easyicon.net/api/resizeApi.php?id=1229001&size=128");
@@ -334,11 +345,13 @@ namespace LrcEditor
         public Uri b_PicUrl { get { return PicUrl; } set { UpdateProperty(ref PicUrl, value); } }
         public Uri b_FileUrl { get { return FileUrl; } set { UpdateProperty(ref FileUrl, value); } }
         public Uri b_OnlinePlayUrl { get { return OnlinePlayUrl; } set { UpdateProperty(ref OnlinePlayUrl, value); } }
-        public string b_SongDuration {
-            get {
-                return $"{SongDuration / 60} : {SongDuration % 60}";
+        public string b_SongDuration
+        {
+            get
+            {
+                return string.Format("{0:d2} : {1:d2}", SongDuration / 60, SongDuration % 60);
             }
-            set { SongDuration = int.Parse(value);OnPropertyChanged("b_Duration"); }
+            set { SongDuration = int.Parse(value); OnPropertyChanged("b_Duration"); }
         }
         public string b_SongLyric { get { return SongLyric; } set { s_SongLyric = value; } }
         public string s_SongLyric { get { return "Click to View"; } set { UpdateProperty(ref SongLyric, value); } }
@@ -353,30 +366,51 @@ namespace LrcEditor
         public LInterface.LSearchChoice Src;
 
         // 实现接口 INotifyPropertyChanged
-        void UpdateProperty<T>(ref T properVal,T newVal,[CallerMemberName] string propertyName = "")
+        void UpdateProperty<T>(ref T properVal, T newVal, [CallerMemberName] string propertyName = "")
         {
             if (Equals(properVal, newVal)) return;
             properVal = newVal;
             OnPropertyChanged(propertyName); // 触发 PropertyChanged
         }
 
-        void OnPropertyChanged([CallerMemberName] string c_infomation="")
+        void OnPropertyChanged([CallerMemberName] string c_infomation = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(c_infomation));
             // 由 PropertyChangedEventHandler 调用委托触发 PropertyChanged 事件
         }
 
-        public void Specify()
+        public void SpecifyAsync(object obj /*callback*/)
         {
-            if (Src == LInterface.LSearchChoice.NetEase) return;
-            if (Src == LInterface.LSearchChoice.QQMusic)
+            if (Src == LInterface.LSearchChoice.NetEase)
+            {
+                int SongID = int.Parse(QMid);
+                NetEaseReturn_Lyric nerl = LInterface.Deserialize<NetEaseReturn_Lyric>(LInterface.GetResponse(LInterface.NetEaseMusic_Lyric(SongID)));
+                b_SongLyric = nerl.lrc.lyric + nerl.tlyric.lyric;
+                NetEaseReturn_Download nerd = LInterface.Deserialize<NetEaseReturn_Download>(LInterface.GetResponse(LInterface.NetEaseMusic_Download(SongID)));
+                b_FileUrl = new Uri(nerd.data[0].url);
+                NetEaseReturn_Pic nerp = LInterface.Deserialize<NetEaseReturn_Pic>(LInterface.GetResponse(LInterface.NetEaseMusic_Album(albumID)));
+                b_PicUrl = new Uri(nerp.songs[0].al.picUrl);
+
+            }
+            else if (Src == LInterface.LSearchChoice.QQMusic)
             {
                 // 获取Token，再获取下载地址
-                QQMusicReturn_Token qmrt = LInterface.Deserialize<QQMusicReturn_Token>(LInterface.GetResponse(LInterface.QQMusic_Token(QMid)));
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create(new Uri(LInterface.QQMusic_Token(QMid)));
+                req.Headers.Add("Cookie", "skey=@Y3TD47qBo");
+                req.Referer = "https://y.qq.com/portal/player.html";
+                QQMusicReturn_Token qmrt;
+                using (Stream stream = req.GetResponse().GetResponseStream())
+                {
+                    StreamReader sr = new StreamReader(stream, Encoding.UTF8);
+                    qmrt = LInterface.Deserialize<QQMusicReturn_Token>(sr.ReadToEnd());
+                    sr.Close();
+                    stream.Close();
+                }
+
                 b_FileUrl = new Uri(LInterface.QQMusic_Download(QMid, qmrt.data.items[0].vkey));
                 //获取歌词
                 QQMusicReturn_Lyric qmrl;
-                HttpWebRequest req = (HttpWebRequest)WebRequest.Create(new Uri(LInterface.QQMusic_Lyric(QMid)));
+                req = (HttpWebRequest)WebRequest.Create(new Uri(LInterface.QQMusic_Token(QMid)));
                 req.Headers.Add("Cookie", "skey=@Y3TD47qBo");
                 req.Referer = "https://y.qq.com/portal/player.html";
                 using (Stream stream = req.GetResponse().GetResponseStream())
@@ -410,6 +444,7 @@ namespace LrcEditor
                 b_OnlinePlayUrl = new Uri(LInterface.KuGouMusic_OnlineAddr(QMid));
                 b_SongLyric = kgrs.data.lyrics;
             }
+            ((Action)obj).Invoke();
         }
 
         /// <summary>
@@ -421,17 +456,11 @@ namespace LrcEditor
             Src = LInterface.LSearchChoice.NetEase;
             b_SongName = nerls.name;
             b_SongArtist = nerls.artists[0].name;
-            SongID = nerls.id;
-            string result = LInterface.GetResponse(LInterface.NetEaseMusic_Album(SongID));
-            NetEaseReturn_Album nera = LInterface.Deserialize<NetEaseReturn_Album>(result);
-            b_SongAlbum = nera.songs[0].album.name;
-            b_PicUrl = new Uri(nera.songs[0].album.picUrl);
-            b_FileUrl = new Uri(LInterface.NetEaseMusic_Download(SongID));
-            result = LInterface.GetResponse(LInterface.NetEaseMusic_Lyric(SongID));
-            NetEaseReturn_Lyric nerl = LInterface.Deserialize<NetEaseReturn_Lyric>(result);
-            b_SongLyric = ((nerl.lrc.lyric == null) ? "" : nerl.lrc.lyric) + ((nerl.tlyric.lyric == null) ? "" : nerl.tlyric.lyric);
+            b_SongAlbum = nerls.album.name;
             b_SongDuration = (nerls.duration / 1000).ToString();
-            b_OnlinePlayUrl = new Uri(LInterface.NetEaseMusic_Play(SongID));
+            b_OnlinePlayUrl = new Uri(LInterface.NetEaseMusic_Play(nerls.id));
+            QMid = nerls.id.ToString();
+            albumID = nerls.album.id;
         }
 
         /// <summary>
@@ -466,7 +495,7 @@ namespace LrcEditor
             QMid = kgrss.hash;
         }
     }
-    
+
     public class LSearchEngine
     {
         public Thread UpdateSearchResultThread;
@@ -474,7 +503,7 @@ namespace LrcEditor
         bool isSeachCanceled;
         LInterface.LSearchChoice mSearchChoice;
         string mKeyWord;
-        
+
         /// <summary>
         /// 搜索引擎的默构造方法
         /// </summary>
@@ -490,14 +519,14 @@ namespace LrcEditor
         /// </summary>
         /// <param name="KeyWord">要搜索的关键字</param>
         /// <param name="searchchoice">搜索引擎的选择</param>
-        public void BeginSearch(string KeyWord,LInterface.LSearchChoice searchchoice)
+        public void BeginSearch(string KeyWord, LInterface.LSearchChoice searchchoice)
         {
             isSeachCanceled = false;
             mSearchChoice = searchchoice;
             mKeyWord = KeyWord;
             UpdateSearchResultThread = new Thread(new ThreadStart(OnThreadWork));
             UpdateSearchResultThread.Start();
-            
+
         }
 
         /// <summary>
@@ -510,7 +539,7 @@ namespace LrcEditor
 
         void OnThreadWork()
         {
-            if(mSearchChoice == LInterface.LSearchChoice.NetEase)
+            if (mSearchChoice == LInterface.LSearchChoice.NetEase)
             {
                 NetEaseReturn_Song ners = LInterface.Deserialize<NetEaseReturn_Song>(LInterface.GetResponse(LInterface.NetEaseMusic_Search(1, mKeyWord)));
                 if (isSeachCanceled) { SearchResultUpdateHandler?.Invoke(null, true); return; }
@@ -521,7 +550,7 @@ namespace LrcEditor
                     catch { continue; }
                 }
             }
-            else if(mSearchChoice == LInterface.LSearchChoice.QQMusic)
+            else if (mSearchChoice == LInterface.LSearchChoice.QQMusic)
             {
                 QQMusicReturn_Song qmrs = LInterface.Deserialize<QQMusicReturn_Song>(LInterface.GetResponse(LInterface.QQMusic_Search(1, mKeyWord), true));
                 if (isSeachCanceled) return;
