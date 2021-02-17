@@ -14,7 +14,7 @@
 1. 更新了网易云搜索 API： [API - IMJAD](https://api.imjad.cn/cloudmusic/)
 2. 优化了搜索体验
 
-**注意：**QQ音乐下载功能现在不可用
+**注意：** QQ音乐下载功能现在不可用
 
 
 
