@@ -53,14 +53,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LrcEditor.exe" size="1161112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LrcEditor.exe" size="1156504">
       <assemblyIdentity name="LrcEditor" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qI6M/nfgUIYSIuHR1TINbagArNl6QWtxAydXNAkUY44=</dsig:DigestValue>
+        <dsig:DigestValue>6+mJTW1lnyb5+oWy1tgGJlBugp+qRRel+mX8mc8nffo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

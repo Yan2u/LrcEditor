@@ -137,8 +137,6 @@ namespace LrcEditor
 
         /// <summary>
         /// 酷狗音乐搜索接口
-        /// 鸣谢：MessAPI
-        /// https://github.com/messoer
         /// </summary>
         static readonly string KuGouMusicSearch = "http://mobilecdn.kugou.com/api/v3/search/song?format=json&keyword={1}&page={0}&pagesize=35&showtype=1";
         static readonly string KuGouMusicDetail = "https://www.kugou.com/yy/index.php?r=play/getdata&hash={0}";

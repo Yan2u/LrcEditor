@@ -50,4 +50,3 @@ E:\Mp\C#.NET\LrcEditor\LrcEditor\obj\Debug\LrcEditor.csproj.CopyComplete
 E:\Mp\C#.NET\LrcEditor\LrcEditor\obj\Debug\LrcEditor.exe
 E:\Mp\C#.NET\LrcEditor\LrcEditor\obj\Debug\LrcEditor.pdb
 E:\Mp\C#.NET\LrcEditor\LrcEditor\obj\Debug\LrcEditor.csprojAssemblyReference.cache
-E:\Mp\C#.NET\LrcEditor\LrcEditor\obj\Debug\GeneratedInternalTypeHelper.g.cs
